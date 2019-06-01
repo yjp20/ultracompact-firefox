@@ -3,15 +3,15 @@
 }
 
 :root:not([customizing]) #navigator-toolbox #nav-bar {
-  min-height: 0!important;
+	min-height: 0!important;
 	max-height: 0;
-  height: 0;
+	height: 0;
 	overflow: hidden;
 }
 
 :root:not([customizing]) #navigator-toolbox:focus-within #nav-bar {
 	max-height: 32px;
-  height: 32px;
+	height: 32px;
 }
 
 :root:not([customizing]) .tabbrowser-tab:not([pinned="true"]) {
