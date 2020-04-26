@@ -1,17 +1,24 @@
+:root {
+	--unselected-tab-background: #e3e3e3;
+	--selected-tab-background: #333;
+}
+
 :root:not([customizing]) #navigator-toolbox {
-	background-color: #e2e2e2!important;
+	/*background-color: var(--unselected-tab-background)!important;*/
 }
 
 :root:not([customizing]) #navigator-toolbox #nav-bar {
 	min-height: 0!important;
 	max-height: 0;
-	height: 0;
-	overflow: hidden;
 }
 
 :root:not([customizing]) #navigator-toolbox:focus-within #nav-bar {
-	max-height: 32px;
-	height: 32px;
+	max-height: unset;
+	overflow: visible!important;
+}
+
+:root:not([customizing]) #urlbar[breakout] {
+	--urlbar-toolbar-height: 32px!important;
 }
 
 :root:not([customizing]) .tabbrowser-tab:not([pinned="true"]) {
@@ -22,6 +29,10 @@
 
 :root:not([customizing]) .tabbrowser-tab:not([pinned="true"]) .tab-stack {
 	flex-basis: 1;
+}
+
+:root:not([customizing]) .tabbrowser-tab[selected="true"] .tab-background {
+	background-color: var(--selected-tab-background)!important;
 }
 
 :root:not([customizing]) .tab-content {
